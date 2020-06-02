@@ -67,6 +67,12 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *brave[]    = { "brave-browser", NULL };
 static const char *ranger[]   = { "st", "ranger", NULL };
+static const char *idea[]     = { "idea", NULL };
+static const char *umagback[] = { "idea", "Work/umag-backend", NULL };
+static const char *umagpos[]  = { "idea", "Work/smartstore-desktop-client-java", NULL };
+static const char *screenfs[] = { "scrht", "-fs", NULL };
+static const char *screenw[]  = { "scrht", "-w", NULL };
+static const char *screenp[]  = { "scrht", "-p", NULL };
 
 static Key keys[] = {
 	/* modifier                     key                 function        argument */
@@ -74,6 +80,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_s,               spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_w,               spawn,          {.v = brave } },
 	{ MODKEY,                       XK_r,               spawn,          {.v = ranger } },
+	{ MODKEY,                       XK_i,               spawn,          {.v = idea } },
+	{ MODKEY,                       XK_F1,              spawn,          {.v = umagback } },
+	{ MODKEY,                       XK_F2,              spawn,          {.v = umagpos } },
+	{ MODKEY|ShiftMask,             XK_F1,              spawn,          {.v = screenfs } },
+	{ MODKEY|ShiftMask,             XK_F2,              spawn,          {.v = screenw } },
+	{ MODKEY|ShiftMask,             XK_F3,              spawn,          {.v = screenp } },
 	{ MODKEY,                       XK_b,               togglebar,      {0} },
 	{ MODKEY,                       XK_j,               focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,               focusstack,     {.i = -1 } },
